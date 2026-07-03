@@ -124,12 +124,22 @@
           <li>Estimated guest count</li>
           <li>Expected performance time — for example, 2 x 45-minute sets</li>
         </ul>
-        <!-- TALLY EMBED SLOT: when the Tally form link is ready, replace the
-             paragraph below with the embed, e.g.
-             <iframe src="https://tally.so/embed/FORM_ID?transparentBackground=1&hideTitle=1"
-                     width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0"
-                     title="Booking inquiry form" loading="lazy"></iframe> -->
-        <p class="inquiry-note">Send those details by call, text, or email above and we'll take it from there.</p>
+        <div class="tally-embed-wrap">
+          <iframe data-tally-src="https://tally.so/embed/VLyGJg?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                  loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0"
+                  title="Book Uncle Mercy CCR — inquiry form"></iframe>
+        </div>
+        <script>
+          var d = document, w = "https://tally.so/widgets/embed.js",
+            v = function () {
+              "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function (e) { e.src = e.dataset.tallySrc; });
+            };
+          if ("undefined" != typeof Tally) v();
+          else if (d.querySelector('script[src="' + w + '"]') == null) {
+            var s = d.createElement("script");
+            s.src = w; s.onload = v; s.onerror = v; d.body.appendChild(s);
+          }
+        </script>
       </div>
     </section>
 

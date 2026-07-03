@@ -946,6 +946,16 @@ button:focus-visible {
   max-width: none;
 }
 
+.tally-embed-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.tally-embed-wrap iframe {
+  width: 100%;
+  border: 0;
+}
+
 /* ------------------------------------------------------------- lightbox */
 
 .lightbox {
