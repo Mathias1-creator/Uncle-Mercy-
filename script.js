@@ -57,6 +57,9 @@
     ".contact-actions",
     ".pull-quote",
     ".stats",
+    ".songlist",
+    ".provide-card",
+    ".inquiry-list",
     ".social-row",
     ".cta-final .btn-row"
   ];

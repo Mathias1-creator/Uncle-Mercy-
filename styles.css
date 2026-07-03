@@ -340,7 +340,7 @@ button:focus-visible {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   .menu-toggle {
     display: none;
   }
@@ -373,7 +373,9 @@ button:focus-visible {
     background: var(--red-dark);
     color: #fff;
   }
+}
 
+@media (min-width: 1100px) {
   .header-phone {
     display: inline-block;
   }
@@ -438,6 +440,9 @@ button:focus-visible {
 /* -------------------------------------------------------------- marquee */
 
 .marquee {
+  /* The inline display:none keeps the raw text from flashing before this
+     stylesheet loads; once styled, this wins. */
+  display: block !important;
   overflow: hidden;
   background: var(--red);
   padding: 0.85rem 0;
@@ -837,6 +842,108 @@ button:focus-visible {
   .gallery-grid figure {
     margin-bottom: 1.25rem;
   }
+}
+
+/* ---------------------------------------------------- what we provide */
+
+.provide-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.provide-card {
+  background: var(--surface);
+  border-top: 3px solid var(--red);
+  padding: 1.75rem 1.5rem;
+}
+
+.provide-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.provide-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 600px) {
+  .provide-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .provide-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ------------------------------------------------------------ song list */
+
+.songlist {
+  list-style: none;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.songlist li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.songlist .song {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+}
+
+.songlist .artist {
+  color: var(--muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.songlist-note {
+  text-align: center;
+  color: var(--muted);
+  max-width: none;
+  margin-top: 2rem;
+}
+
+/* -------------------------------------------------------- inquiry list */
+
+.inquiry-list {
+  list-style: none;
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+
+.inquiry-list li {
+  padding: 0.85rem 0 0.85rem 1.75rem;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.inquiry-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.35rem;
+  width: 10px;
+  height: 3px;
+  background: var(--red);
+}
+
+.inquiry-note {
+  text-align: center;
+  color: var(--muted);
+  max-width: none;
 }
 
 /* ------------------------------------------------------------- lightbox */
