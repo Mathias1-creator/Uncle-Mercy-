@@ -59,7 +59,6 @@
     ".stats",
     ".songlist",
     ".provide-card",
-    ".inquiry-list",
     ".tally-embed-wrap",
     ".social-row",
     ".cta-final .btn-row"

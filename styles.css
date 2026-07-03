@@ -916,36 +916,6 @@ button:focus-visible {
   margin-top: 2rem;
 }
 
-/* -------------------------------------------------------- inquiry list */
-
-.inquiry-list {
-  list-style: none;
-  max-width: 560px;
-  margin: 0 auto 2rem;
-}
-
-.inquiry-list li {
-  padding: 0.85rem 0 0.85rem 1.75rem;
-  border-bottom: 1px solid var(--line);
-  position: relative;
-}
-
-.inquiry-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 1.35rem;
-  width: 10px;
-  height: 3px;
-  background: var(--red);
-}
-
-.inquiry-note {
-  text-align: center;
-  color: var(--muted);
-  max-width: none;
-}
-
 .tally-embed-wrap {
   max-width: 700px;
   margin: 0 auto;
