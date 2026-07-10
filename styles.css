@@ -391,10 +391,10 @@ button:focus-visible {
   justify-content: flex-start;
   text-align: center;
   min-height: 92vh;
-  padding: clamp(1.5rem, 5vh, 3rem) 0 clamp(3rem, 8vh, 5rem);
+  padding: clamp(0.35rem, 1.2vh, 0.9rem) 0 clamp(3rem, 8vh, 5rem);
   background:
     linear-gradient(rgba(13, 13, 13, 0.78), rgba(13, 13, 13, 0.92) 78%, var(--bg)),
-    url("img/band.jpg") center 14% / cover no-repeat;
+    url("img/band.jpg") center 3% / cover no-repeat;
 }
 
 .hero::before {
@@ -410,9 +410,9 @@ button:focus-visible {
 }
 
 .hero-logo {
-  width: min(280px, 62vw);
+  width: min(210px, 50vw);
   height: auto;
-  margin: 0 auto clamp(3rem, 19vh, 11rem);
+  margin: 0 auto clamp(4rem, 27vh, 15rem);
   filter: drop-shadow(0 0 32px rgba(215, 38, 61, 0.35));
 }
 
