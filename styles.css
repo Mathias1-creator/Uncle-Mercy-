@@ -440,7 +440,7 @@ button:focus-visible {
 .hero-logo {
   width: min(210px, 50vw);
   height: auto;
-  margin: 0 auto clamp(5rem, 34vh, 18rem);
+  margin: 0 auto clamp(4.5rem, 30vh, 16rem);
   filter: drop-shadow(0 0 32px rgba(215, 38, 61, 0.35));
 }
 
