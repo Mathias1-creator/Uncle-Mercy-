@@ -57,7 +57,7 @@
     ".contact-actions",
     ".pull-quote",
     ".stats",
-    ".songlist",
+    ".setlist",
     ".provide-card",
     ".tally-embed-wrap",
     ".social-row",
