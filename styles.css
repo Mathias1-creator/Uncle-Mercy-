@@ -28,6 +28,11 @@
 
 html {
   scroll-behavior: smooth;
+  /* keep anchored sections clear of the sticky header */
+  scroll-padding-top: 84px;
+  /* stop iOS Safari from auto-inflating text in landscape */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -37,6 +42,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
 
 img {
@@ -61,6 +67,8 @@ h1, h2, h3 {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   line-height: 1.1;
+  text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 h1 {
@@ -391,6 +399,9 @@ button:focus-visible {
   justify-content: flex-start;
   text-align: center;
   min-height: 92vh;
+  /* svh tracks the *visible* viewport, so mobile browser bars don't push
+     the CTAs off-screen; vh above is the fallback for older browsers */
+  min-height: 92svh;
   padding: clamp(0.35rem, 1.2vh, 0.9rem) 0 clamp(3rem, 8vh, 5rem);
   background:
     linear-gradient(rgba(13, 13, 13, 0.78), rgba(13, 13, 13, 0.92) 78%, var(--bg)),
@@ -1203,6 +1214,8 @@ button:focus-visible {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   padding: 1rem 0.5rem;
+  /* clear the iPhone home-indicator area */
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom));
   transition: background var(--ease);
 }
 
@@ -1215,13 +1228,13 @@ button:focus-visible {
   background: var(--red-dark);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 999px) {
   body {
-    padding-bottom: 56px;
+    padding-bottom: calc(60px + env(safe-area-inset-bottom));
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .mobile-bar {
     display: none;
   }
