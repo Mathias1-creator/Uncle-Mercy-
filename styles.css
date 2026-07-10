@@ -408,6 +408,23 @@ button:focus-visible {
     url("img/band.jpg") center 3% / cover no-repeat;
 }
 
+@media (max-aspect-ratio: 13/10) {
+  .hero {
+    /* On a portrait-ish screen `cover` scales the landscape band photo by
+       height, which crops the outer members off the sides. Whenever the
+       viewport is narrower than the photo needs, show it at full width so all
+       five guys stay in frame; black fills above/below. Landscape/desktop
+       keeps the full-bleed `cover` above. */
+    background-image:
+      linear-gradient(rgba(13, 13, 13, 0.62), rgba(13, 13, 13, 0.9) 86%, var(--bg)),
+      url("img/band.jpg");
+    background-size: auto, 110% auto;
+    background-position: center, center 46%;
+    background-repeat: no-repeat, no-repeat;
+    background-color: var(--bg);
+  }
+}
+
 .hero::before {
   content: "";
   position: absolute;
